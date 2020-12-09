@@ -40,14 +40,6 @@ RUN go get -u -v \
     golang.org/x/tools/cmd/guru \
     google.golang.org/grpc
 
-# Application dependencies
-RUN go get -u -v \
-    gopkg.in/yaml.v2 \
-    github.com/gin-gonic/gin \
-    github.com/dgrijalva/jwt-go \
-    github.com/kelseyhightower/envconfig \
-    golang.org/x/sync/errgroup
-
 # Clean up
 RUN dnf clean all --assumeyes \
   && rm -rf /var/cache/yum
